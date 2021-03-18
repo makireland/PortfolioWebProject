@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Web Designer</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- section hamburguer -->
+        <div class="hamburguer">
+            <div class="line" id="line1"></div>
+            <div class="line" id="line2"></div>
+            <div class="line" id="line3"></div>
+            <span>Close</span>
+        </div>
+
+        <!-- section sidebar -->
+        <aside class="sidebar">
+            <nav>
+                <ul class="menu">
+                    <li class="menu-item"><a href="index.html" class="menu-link">Home</a></li>
+                    <li class="menu-item"><a href="#skill-section" class="menu-link">Skills</a></li>
+                    <li class="menu-item"><a href="#section-projects" class="menu-link">Projects</a></li>
+                    <li class="menu-item"><a href="#contact-section" class="menu-link">Contact</a></li>
+                    <li class="menu-item"><a href="quote.html" class="menu-link">New Quote</a></li>
+                </ul>
+            </nav>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github-alt"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </aside>
+
+        <!-- section quote -->
+        <section id="quote-section">
+            <div class="quote-wrapper">
+                <h1>Get a Quote</h1>
+                <form>
+                    <label for="qtd">Quantity</label>
+                    <input type="number" min="1" name="quantity" id="qtd">
+
+                    <label for="js">Need script JS</label>
+                    <input type="checkbox" name="js" id="jsCheckBox">
+
+                    <label>Layout</label>
+                    <div class="group-layout">
+                        <div>
+                            <input type="radio" name="layout" id="layout-yes">
+                            <label for="layout-yes">Need a Layout</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="layout" id="layout-no">
+                            <label for="layout-no">I already have a Layout</label>
+                        </div>
+                    </div>
+                    <label for="delivery-time">Delivery Time</label>
+                    <input type="range" name="delivery-time" id="delivery-time" value="1" min="0" max="10">
+                    <label id="price">€ 0.00</label>
+                    <button class="btn btn-quote" type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- section footer -->
+        <footer>
+            <div class="footer-content">
+                <p>
+                    Copyright &copy; 2021 | Maksuel da S. Milhomem - All Rights Reserved
+                </p>
+                <div class="social-media-footer">
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
