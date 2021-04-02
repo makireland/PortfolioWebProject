@@ -1,7 +1,9 @@
+/* import fonts and Icons */
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css");
 
+/* setup the whole page */
 * {
     margin: 0;
     padding: 0;
@@ -9,17 +11,19 @@
     text-decoration: none;
 }
 
+/* created variables  */
 :root {
     --font-primary: "Baloo Da 2", serif;
     --font-secondary: "Josefin Slab", serif;
     --font-action: "Muli", serif;
 }
 
+/* make the page scroll smooth */
 html{
     scroll-behavior: smooth;
 }
 
-
+/* setting the hamburguer for the menu */
 .hamburguer {
     display: flex;
     width: 2rem;
@@ -34,10 +38,12 @@ html{
     transition: all 1.5s;
 }
 
+
 .show-menu .hamburguer {
     right: 16rem;
 }
 
+/* setting the lines */
 .line {
     width: 100%;
     height: .1rem;
@@ -46,19 +52,23 @@ html{
     transition: transform 1s;
 }
 
+/* making a transformation to rotate when its clicked */
 .show-menu #line1 {
     transform: rotate(45deg) translate(.3rem, .45rem);
 }
 
+/* making a transformation middle line to hide*/
 .show-menu #line2 {
     opacity: 0;
     visibility: hidden;
 }
 
+/* making a transformation to rotate when its clicked */
 .show-menu #line3 {
     transform: rotate(-45deg) translate(.3rem, -.45rem);
 }
 
+/* text will appear for hamburguer */
 .hamburguer span {
     position: absolute;
     left: 4rem;
@@ -76,6 +86,7 @@ html{
     transition: all 1s;
 }
 
+/* making this position and border before the span */
 .hamburguer span::before {
     content: "";
     position: absolute;
@@ -86,10 +97,12 @@ html{
     left: -1.3rem;
 }
 
+/* text will appear on mouse hover */
 .show-menu .hamburguer:hover span {
     opacity: 1;
 }
 
+/* header section */
 header {
     width: 100%;
     height: 100vh;
@@ -98,6 +111,7 @@ header {
     margin-bottom: 10rem;
 }
 
+/* header img to animation, background transparent, to cover all page */
 .img-wrapper {
     width: 100%;
     height: 100%;
@@ -106,6 +120,7 @@ header {
     animation: zoom 10s;
 }
 
+/* header img covering all page and less contrast */
 .img-wrapper img {
     width: 100%;
     height: 100%;
@@ -113,6 +128,7 @@ header {
     opacity: 0.3;
 }
 
+/* img animation scaling down */
 @keyframes zoom {
     0% {
         transform: scale(1.3);
@@ -123,13 +139,15 @@ header {
     }
 }
 
-.banner {
+/* banner text */
+.banner-text {
     position: absolute;
     top: 29%;
     left: 12%;
 }
 
-.banner h1 {
+/* setting banner-text h1, creting animation */
+.banner-text h1 {
     color: #ffffff;
     font-size: 3.5rem;
     font-family: var(--font-primary);
@@ -141,7 +159,8 @@ header {
     animation: moveBanner 1.5s 0.5s forwards;
 }
 
-.banner p {
+/* setting banner-text p, creting animation */
+.banner-text p {
     font-family: var(--font-secondary);
     color: #ffffff;
     font-size: 2rem;
@@ -151,7 +170,8 @@ header {
     animation: moveBanner 1.5s 0.7s forwards;
 }
 
-.banner button {
+/* setting banner-text button, creting animation */
+.banner-text button {
     font-family: var(--font-action);
     background: #ffffff15;
     color: #ffffff;
@@ -166,6 +186,7 @@ header {
     animation: moveBanner 1.5s 0.9s forwards;
 }
 
+/* banner-text animation from the opacity: hidden to Vertical position rotate */
 @keyframes moveBanner {
     0% {
         transform: translateY(10rem) rotateY(-30deg);
@@ -177,7 +198,8 @@ header {
     }
 }
 
-.banner button:hover {
+/* banner-text button to change the color on mouse hover */
+.banner-text button:hover {
     background-color: #7a45dc;
     background: -webkit-linear-gradient(to right, #7a45dc, #B06AB3);
     background: linear-gradient(to right, #7a45dc, #B06AB3);
@@ -185,6 +207,7 @@ header {
     font-size: 1rem;
 }
 
+/* creating sidebar starting point*/
 .sidebar {
     width: 20rem;
     height: 100vh;
@@ -196,10 +219,12 @@ header {
     z-index: 98;
 }
 
+/* sidebar finish position */
 .show-menu .sidebar {
     right: 0;
 }
 
+/* menu list */
 .menu {
     position: absolute;
     top: 40%;
@@ -207,10 +232,12 @@ header {
     transform: translate(-50%, -50%);
 }
 
+/* menu margint from botton between them */
 .menu .menu-item {
     margin-bottom: .5rem;
 }
 
+/* seeting the list size, font type, color, delay transition */
 .menu .menu-link {
     font-family: var(--font-action);
     font-size: 2rem;
@@ -218,10 +245,12 @@ header {
     transition: color 0.5s ease-in-out;
 }
 
+/* menu list color change on mouse hover */
 .menu-link:hover {
     color: #9e6cfa;
 }
 
+/* social media icons on the menu */
 .social-media {
     position: absolute;
     bottom: 2rem;
@@ -230,6 +259,7 @@ header {
     justify-content: space-evenly;
 }
 
+/* setting social media menu icons */
 .social-media i {
     color: rgb(122, 122, 122);
     height: 2.5rem;
@@ -241,6 +271,7 @@ header {
     transition: color 1s;
 }
 
+/* changing social media menu icons color on mouse hover */
 .social-media i:hover {
     color: #8357d6;
 }
@@ -254,6 +285,8 @@ header {
     margin: 4rem 0;
 }
 
+/* positioning the skill images by  child parents and column start point and finish point and 
+row start point and finish point */
 .skills:nth-child(1) {
     grid-column: 4 / 7;
     grid-row: 1 / 3;
@@ -284,12 +317,14 @@ header {
     grid-row: 5 / -1;
 }
 
+/* general header section for all header-section class */
 .header-section {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* general header section h1 for all header-section class */
 .header-section h1 {
     font-family: var(--font-primary);
     font-size: 3rem;
@@ -298,33 +333,40 @@ header {
     margin-bottom: 1.5rem;
 }
 
+/* header of skills */
 .header-skills {
     display: flex;
     align-items: center;
     color: #4b4b4b;
 }
 
+/* header of skill icon */
 .header-skills i {
     font-size: 2.5rem;
 }
 
+/* header skill subtitle */
 .header-skills h3 {
     font-family: var(--font-secondary);
     font-size: 2rem;
     padding-left: 1rem;
 }
 
+/* context inside the skill */
 .skill-context {
     font-family: var(--font-secondary);
     margin-top: 1rem;
 }
 
+/* skill image in the center of the page position starting point
+and finish point for column and row */
 .skills-img-wrapper {
     grid-column: 7 / 10;
     grid-row: 2 / 6;
     width: 100%;
 }
 
+/* setting the image to cover */
 .skills-img-wrapper img {
     object-fit: cover;
     width: 100%;
@@ -338,11 +380,13 @@ header {
     margin: 5rem 0;
 }
 
+/* project cards size */
 .card {
     width: 18rem;
     height: 25rem;
 }
 
+/* project cards size wrapper around img */
 .card-img-wrapper {
     width: 100%;
     height: 100%;
@@ -350,6 +394,7 @@ header {
     border-radius: .5rem;
 }
 
+/* project cards img inside the card*/
 .card-img-wrapper img {
     object-fit: cover;
     width: 100%;
@@ -359,10 +404,12 @@ header {
     transition: opacity .5s;
 }
 
+/* card image opacity on mouse hover */
 .card:hover .card-img-wrapper img {
     opacity: .4;
 }
 
+/* context in the card */
 .card-info {
     position: absolute;
     opacity: 0;
@@ -373,6 +420,7 @@ header {
     transition: all .5s;
 }
 
+/* h2 in the card */
 .card-info h2 {
     font-family: var(--font-primary);
     font-size: 2rem;
@@ -380,6 +428,7 @@ header {
     color: #eee;
 }
 
+/* h3 in the card */
 .card-info h3 {
     font-family: var(--font-action);
     font-weight: bolder;
@@ -387,6 +436,7 @@ header {
     margin-bottom: 1.5rem;
 }
 
+/* paragraph in the card */
 .card-info p {
     font-family: var(--font-secondary);
     color: #eee;
@@ -395,6 +445,7 @@ header {
     margin-bottom: 2rem;
 }
 
+/* button ckass general in the card section*/
 .btn {
     background-color: #7a45dc;
     background: -webkit-linear-gradient(to right, #7a45dc, #B06AB3);
@@ -407,12 +458,13 @@ header {
     box-shadow: 0 .1rem .8rem rgb(0, 0, 0, .4);
 }
 
+/* card button size */
 .card-info button {
     width: 8rem;
     height: 2.5rem;
-
 }
 
+/* card information appear on mouse hover */
 .card:hover .card-info {
     bottom: 2rem;
     opacity: 1;
@@ -431,6 +483,7 @@ header {
     margin-top: 2rem;
 }
 
+/* wrapper around the contact */
 .contact-wrapper {
     width: 45%;
     height: 34rem;
@@ -438,18 +491,21 @@ header {
     box-shadow: 0 2rem 3rem rgb(0, 0, 0, .4);
 }
 
+/* adding image from the left in the contact section */
 .contact-left {
     width: 40%;
     background: linear-gradient(rgb(15, 15, 15, .6), rgb(22, 22, 22, .9)), url("../img/contact.jpg");
     background-size: cover;
 }
 
+/* setting the right side constact block  */
 .contact-right {
     width: 50%;
     background-color: #eee;
     padding: 1rem 3rem 3rem 3rem;
 }
 
+/* setting the title in the contact section */
 #contact-section h1 {
     width: 100%;
     text-align: center;
@@ -459,6 +515,7 @@ header {
     font-weight: lighter;
 }
 
+/* setting the form in the contact section */
 #contact-section form {
     width: 100%;
     display: flex;
@@ -466,10 +523,12 @@ header {
     align-items: center;
 }
 
+/* setting the input position in the contact section  */
 .input-group {
     position: relative;
 }
 
+/* setting the class field in the contact section */
 .field {
     background: transparent;
     border: none;
@@ -482,12 +541,14 @@ header {
     margin: 1rem 0;
 }
 
+/* setting the textarea in the contact section */
 .input-group textarea {
     padding-top: 1rem;
     max-width: 20rem;
     max-height: 5rem;
 }
 
+/* setting the labels in the contact section */
 .field-label {
     position: absolute;
     left: 0;
@@ -498,15 +559,18 @@ header {
     transition: all .3s;
 }
 
+/* select every label that is preceded by class field */
 .field:focus~label {
     top: 0;
     font-size: 1rem;
 }
 
+/* changing focus of the class field giving a new border type */
 .field:focus {
     border-bottom: 1px solid;
 }
 
+/* setting button of contact section */
 .btn-submit {
     width: 100%;
     height: 3rem;
@@ -515,7 +579,7 @@ header {
     margin-top: 1rem;
 }
 
-/* quote-section */
+/* quote-section and background image*/
 #quote-section {
     width: 100%;
     height: 90vh;
@@ -527,6 +591,7 @@ header {
 
 }
 
+/* quote-wrapper class that wrap around context*/
 .quote-wrapper {
     position: relative;
     border-radius: 10px;
@@ -537,6 +602,7 @@ header {
     margin-top: 4rem;
 }
 
+/* setting title from quote section */
 #quote-section h1 {
     position: absolute;
     top: -2.5rem;
@@ -553,6 +619,7 @@ header {
     border-radius: 10px;
 }
 
+/* setting form from quote section */
 #quote-section form {
     margin: 4rem;
     display: grid;
@@ -562,12 +629,14 @@ header {
     margin-top: 10rem;
 }
 
+/* setting label from quote section */
 #quote-section label {
     font-family: var(--font-secondary);
     font-size: 1.5rem;
     font-weight: bold;
 }
 
+/* setting input type number from quote section */
 #quote-section input[type="number"] {
     font-family: var(--font-secondary);
     width: 4rem;
@@ -578,6 +647,7 @@ header {
     border: none;
 }
 
+/* setting input type checkbox from quote section */
 #quote-section input[type="checkbox"] {
     border: none;
     outline: none;
@@ -585,6 +655,7 @@ header {
     height: 30px;
 }
 
+/* setting input type radio from quote section */
 #quote-section input[type="radio"] {
     border: none;
     outline: none;
@@ -593,10 +664,12 @@ header {
     margin-bottom: 1rem;
 }
 
+/* setting input type range from quote section */
 #quote-section input[type="range"] {
     width: 80%;
 }
 
+/* setting button from quote section */
 .btn-quote {
     text-transform: uppercase;
     padding: 1rem;
@@ -618,18 +691,21 @@ footer {
     align-items: center;
 }
 
+/* setting the footer content wrappimg around */
 .footer-content {
     width: 60%;
     display: flex;
     justify-content: space-between;
 }
 
+/* Setting the paragraph footer section */
 .footer-content p {
     font-family: var(--font-secondary);
     color: #a7a7a7;
     font-size: 1.2rem;
 }
 
+/* Setting the icons social media of footer section */
 .social-media-footer a {
     margin: 0 2rem;
     color: #a7a7a7;
@@ -637,14 +713,17 @@ footer {
     transition: all .3s;
 }
 
+/* changing color the icons social media of footer section */
 .social-media-footer a:hover{
     color: #7a45dc;
 }
 
+/* positioning icons social media of footer section */
 .social-media-footer ul {
     display: flex;
 }
 
+/* setting floating button to bring up to the beginning of the page */
 #up{
     position: fixed;
     right: .5rem;
@@ -662,6 +741,7 @@ footer {
     box-shadow: 0 .1rem .4rem #000000;
 }
 
+/* changing color on mouse hover floating button to bring up to the beginning of the page */
 #up:hover{
     background-color: #7a45dc;
     background: -webkit-linear-gradient(to right, #7a45dc, #B06AB3);
